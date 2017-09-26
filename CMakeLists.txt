@@ -104,10 +104,10 @@ endif()
 
 # Rang
 # ----
-set(LIBRANG_GIT_URL "https://github.com/agauniyal/rang.git" CACHE STRING "URL to the Rang lib repo")
+set(LIBRANG_TAG 2.1)
+set(LIBRANG_URL "https://github.com/agauniyal/rang/archive/${LIBRANG_TAG}.zip" CACHE STRING "URL to the Rang lib repo")
 ExternalProject_Add(lief_rang_cpp_color
-  GIT_REPOSITORY    ${LIBRANG_GIT_URL}
-  GIT_TAG           7f2143809b9ac90a1a8a2e779fb357d8709448c2
+  URL               ${LIBRANG_URL}
   CONFIGURE_COMMAND ""
   BUILD_COMMAND     ""
   INSTALL_COMMAND   "")
